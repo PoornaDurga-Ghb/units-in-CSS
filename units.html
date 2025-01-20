@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+    <style>
+        /* task-1 */
+        .box-px{
+            width: 200px;
+            height: 100px;
+            border: 2px solid yellowgreen;
+        }
+        /* t-2 */
+        .parent-percent{
+            width: 500px;
+            height: 500px;
+            border: 2px solid purple;
+        }
+        .child-percent{
+            width: 50%;
+            height: 50%;
+            border: 2px solid palegoldenrod;
+        }
+        /* t-3 */
+        .rem-paragraph{
+            font-size: 2rem;
+        }
+        /* t-4 */
+        .parent-em{
+            font-size: 16px;
+        }
+        .child-em{
+            font-size: 1.5em;
+        }
+        /* t-5 */
+        .box-vw{
+            width: 50vw;
+            border: 2px solid cadetblue;
+        }
+        /* t-6 */
+        .box-vh{
+            border: 2px solid deeppink;
+            height: 50vh;
+        }
+        /* t-7 */
+        .square-vmin{
+            border: 2px solid darkolivegreen;
+            width: 20vmin;
+            height: 20vmin;
+        }
+        /* t-8 */
+        .square-vmax{
+            border: 2px solid darkred;
+            width: 20vmax;
+            height: 20vmax;  
+        }
+        /* t-9 */
+        .parent-relative{
+            width: 500px;
+            height: 500px;
+            border: 2px solid darkblue;
+            position: relative;
+        }
+        .child-absolute{
+            width: 40%;
+            height: 40%;
+            border: 2px solid darkslategrey;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        /* t-10 */
+        .parent-font{
+            font-size: 20px;
+        }
+        .child-font{
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task-1</h1>
+    <div class="box-px">Box with px units.</div>
+    <p>----there is no change when viewport size changes as pixels have fixed size.</p>
+    <h1>Task-2</h1>
+    <div class="parent-percent">
+        <div class="child-percent">Box with % units</div>
+    </div>    
+    <p>----the child in % depends on its parents container so if parent container size changes then child adjusts to % of parent container</p>
+    <h1>Task-3</h1>
+    <p class="rem-paragraph">This paragraph uses rem units.</p>
+    <p>---- If root font size changes then automatically rem adjusts to root font size * given rem size</p>
+    <h1>Task-4</h1>
+    <div class="parent-em">
+        <p class="child-em">This paragraph uses em units.</p>
+    </div>
+    <p>----the child containers font size adjusts to parents container font size * child containers font size.</p>    
+    <h1>Task-5</h1>
+    <div class="box-vw">Box with vw units</div>
+    <p>----Based on viewport width the container adjusts when browser window is resized.</p>
+    <h1>Task-6</h1>
+    <div class="box-vh">Box with vh units</div>
+    <p>----If browser window resized vertically then the container adjusts to viewports height while resizing.</p>
+    <h1>Task-7</h1>
+    <div class="square-vmin">Square with vmin units</div>
+    <p>----size adjusts to smaller size of viewport width and height as viewport size decreases it also decreases.</p>
+    <h1>Task-8</h1>
+    <div class="square-vmax">Square with vmax units</div>
+    <p>----size adjusts to larger size of viewport width and height as viewport size increases it increases based on it.</p>
+    <h1>Task-9</h1>
+    <div class="parent-relative">
+        <div class="child-absolute">Child Box</div>
+    </div>
+    <p>----the child's width and height adjusts based on parents container's width and height.</p>    
+    <h1>Task-10</h1>
+    <div class="parent-font">
+        Parent Text
+        <div class="child-font">Child Text (Inherits Font Size)</div>
+        <p>----If we change the parents font size then the childs font size also changes same as parents font size as it inherits from it's parent</p>
+    </div>    
+</body>
+</html>
